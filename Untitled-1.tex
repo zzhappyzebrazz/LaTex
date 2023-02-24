@@ -1,0 +1,238 @@
+\documentclass[10pt]{article}
+
+%% PACKAGES %%
+
+\usepackage[english]{babel} % multilingual support
+\usepackage[utf8x]{inputenc} % encoding
+\usepackage{blindtext} % to insert blind text
+\usepackage{hyperref}
+\usepackage[compact]{titlesec}         % you need this package
+
+% Set the default font
+\usepackage{tgpagella}
+
+% set the page layout
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  left=10mm,
+  right=10mm,
+  bottom=3mm,
+  top=4mm}
+
+% empty the headers, footers, page numbers…
+\pagestyle{empty}
+
+% Custom sectioning with secsty
+\usepackage{sectsty}
+
+\sectionfont{%                        
+    \large % make sections smaller
+    \fontfamily{qag}\selectfont % change font family
+    \sectionrule{0pt}{0pt}{-5pt}{1pt} % insert a thin rule
+}
+
+\titlespacing{\section}{0pt}{0pt}{0pt}
+
+%% MACROS %%
+
+% size of the boxes used to align text
+\newlength{\spacebox}
+\settowidth{\spacebox}{123456789}
+
+% vertical space separator between entries
+\newcommand{\sepspace}{\vspace*{0.1em}}
+
+% name
+\newcommand{\name}[1]{
+\Huge % font size
+\fontfamily{phv}\selectfont % font family
+% print name centered and bold
+\begin{center} \textbf{#1} \end{center}\par
+% back to normal size and font
+\normalsize\normalfont}
+
+% motto
+\newcommand{\motto}[1]{
+  \large % font size
+  \fontfamily{phv}\selectfont % font family
+% print motto centered and slanted
+  \begin{center} \textsl{#1}\end{center}\par
+% back to normal size and font
+  \normalsize \normalfont}
+
+
+% personal information
+\newcommand{\info}[2]{
+% set specific indentation for personal information
+  \noindent\hangindent=0em\hangafter=0
+% create a box to align two pieces of text
+  \parbox{\spacebox}{%
+  \textit{#1}} % slanted entry name
+  #2 \par} % entry value
+
+
+% skill
+\newcommand{\skill}[2]{
+% set specific indentation for personal information
+\noindent\hangindent=0em\hangafter=0
+% create a box to align two pieces of text
+\parbox{3\spacebox}{% three times larger box
+\textsc{#1}} % small caps entry name
+#2 \par} % entry value
+
+% language level
+\newcommand{\lan}[2]{
+    % set specific indentation for personal information
+    \noindent\hangindent=0em\hangafter=0
+    % create a box to align two pieces of text
+    \parbox{3\spacebox}{%
+        \textbf{#1}} % bold font entry name
+     #2 \par}    % entry value
+
+% education entry
+\newcommand{\education}[4]{
+
+% name of the studies
+  \noindent  \textbf{#1}
+  % at the right the duration
+    \hfill 
+    \framebox{% duration inside a frame box
+    \parbox{9em}{%
+    \centering\textbf{#2}}} \par
+ % new paragraph with the school in italics
+     \noindent \textit{#3} \par
+     % description with no hanging and in smaller text
+     \vspace*{0.5em}
+     \noindent\hangindent=2em\hangafter=0 \small #4 
+%back to normal size
+\normalsize \par}
+
+
+% work experience
+
+\newcommand{\work}[4]{
+% name of the work
+  \noindent  \textbf{#1}
+% at the right the duration
+  \hfill 
+\framebox{% duration inside a frame box
+  \parbox{9em}{%
+  \centering\textbf{#2}}} \par
+% new paragraph with the school in italics
+  \noindent \textit{#3} \par
+% description with no hanging and in smaller text
+  \vspace*{0.5em}
+  \noindent\hangindent=2em\hangafter=0 \small #4 
+%back to normal size
+\normalsize \par}
+
+\newcommand{\project}[3]{
+  \noindent \textbf{#1} \par
+  \noindent \textit{#2} \par
+  \vspace*{0.5em}
+  \noindent\hangindent=2em\hangafter=0 \small #3
+  \normalsize \par
+}
+
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+\begin{document}
+% name and motto
+\name{Ha Minh Lai}
+\vspace*{-10pt}
+\motto{Junior(Mid) C/C++ Software Engineer}
+
+% personal information
+\info{Email:}{laiminhha060@gmail.com}
+\info{Phone:}{0963749285}
+\info{Address:}{686/78/8 Cach Mang Thang 8, Tan Binh, Ho Chi Minh city}
+\info{Github:}{https://github.com/zzhappyzebrazz}
+\info{Linkedin:}{https://tinyurl.com/2yuapae3}
+
+% work experience
+\section*{Work Experience}
+
+\work{DEK Technologies VietNam}
+{Nov 2021--Now}
+{Junior C/C++ Software Engineer}
+{Working in CSCF project, a central component in IMS architecture.
+ Our customer is Ericsson from Sweden, one of the world leading in telecommunications.
+ \\ My main responsibility is in Product Lifecycle Management(team), my work includes:
+
+\begin{itemize}
+    \item Taking the role of Security Master in my team, ensuring the delivered software meets the basic secure-coding standard.
+     The Standards(Rules) is based on the SEI CERT C++ book. 
+     Define a Way-of-Working for secure-coding review, which was omitted as the time I take over. 
+     Responsible for an official Secure-coding instructions and guideline for the CSCF project.
+    \item Mentoring for a newcomer in my team during his probation period.
+    \item Preparing content and perform early System Test for customer's Emergency Package.
+    \item Resolving the Trouble Reported by customer and deliver the fix to integration branch along with other feature teams.
+\end{itemize}}
+
+
+\work{Intel Products Vietnam}
+{Aug 2020--Feb 2021}
+{Engineering Intern}
+{Worked in the Finish Inspection team, Assembly Engineer department. My work includes:
+\begin{itemize}
+    \item Inherited the hardwares and machines built from a prior intern and my mentor. 
+    Tracked and and troubleshot those Automated Dimensional Visual Inspection(upto 30) machines.
+    \item Used an in-build SQL tool to access and crawled data from VNAT factory. 
+    With the provided data, I performed data pre-processing and built a data set for further machine learning activities. 
+    \item Trained and customized an Object Detection(Python, YOLOv3) model to detect faulty manufacturing, foreign materials and defects on unit product such as Intel Comet Lake, Whisky Lake. 
+    The final demo model exceeded the target Accuracy(80\%) set by my mentor.
+\end{itemize}}
+
+% education
+\section*{Education}
+\education{Ho Chi Minh City University of Technology (HCMUT)}
+{Aug 2017--Nov 2021}
+{Bachelor of Engineering: Electronic and Telecommunication; GPA: 7.29/10}
+{}
+
+\education{Ho Chi Minh City University of Science: Computer Center (HCMUS-CSC)}
+{Aug 2022--Feb 2023}
+{Python Developer Course (Awaiting for Course Certificate)}
+{}
+
+
+\section*{Personal and Academic Projects}
+\project{Sound-Plan an online Music hub}
+{Final project for Python Developer Course }
+{
+  \begin{itemize}
+    \item Using Django framework to develop a web-application(Sound-Plan). 
+     The app is enrich with features that enable user to stream music, buy event ticket and read latest music news.
+     The project was done personally and within a month.
+    \item Github: https://github.com/zzhappyzebrazz/Sound-Plan
+  \end{itemize}
+  }
+
+\project{Indoor Air Quality Monitoring system}
+{Thesis project}
+{
+  \begin{itemize}
+    \item Fully designed and crafted IOT devices that embedded with ARM Cortex-M0 MCU. 
+     The device is solely for the attention of collecting PM2.5 fine dust and many Volatile Organic Compounds concentrations. 
+     The data is packed and sent to a web server (Raspberry pie) by MQTT protocol for visualization(achieved a grade of 89\%).
+
+    \item Github: https://github.com/zzhappyzebrazz/IndoorAirQuality-system
+  \end{itemize}
+  }
+
+% technical skills
+\section*{Technical skills}
+
+\skill{Programming languages}{\textsc{C/C++}, \textsc{Python (Django-framework)}}
+\skill{Other}{\textit{Git, Linux, OOP, Troubleshooting.}}
+
+% languages
+\section*{Languages}
+\lan{VietNamese}{Native}
+\lan{English}{950/990 TOEIC Listening and Reading (Test date: 2020/12/06)}
+
+\end{document}
