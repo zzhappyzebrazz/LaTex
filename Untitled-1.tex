@@ -15,8 +15,8 @@
 \usepackage{geometry}
 \geometry{
   a4paper,
-  left=10mm,
-  right=10mm,
+  left=5mm,
+  right=5mm,
   bottom=3mm,
   top=4mm}
 
@@ -142,48 +142,64 @@
 
 \begin{document}
 % name and motto
-\name{Ha Minh Lai}
-\vspace*{-10pt}
-\motto{Junior(Mid) C/C++ Software Engineer}
+\name{Lai Minh Ha}
+\vspace*{-15pt}
+\motto{Master program candidate}
 
 % personal information
 \info{Email:}{laiminhha060@gmail.com}
 \info{Phone:}{0963749285}
 \info{Address:}{686/78/8 Cach Mang Thang 8, Tan Binh, Ho Chi Minh city}
 \info{Github:}{https://github.com/zzhappyzebrazz}
-\info{Linkedin:}{https://tinyurl.com/2yuapae3}
+\info{Linkedin:}{https://www.linkedin.com/in/minh-h\%C3\%A0-66b097177/}
 
 % work experience
 \section*{Work Experience}
-
-\work{DEK Technologies VietNam}
-{Nov 2021--Now}
-{Junior C/C++ Software Engineer}
-{Working in CSCF project, a central component in IMS architecture.
- Our customer is Ericsson from Sweden, one of the world leading in telecommunications.
- \\ My main responsibility is in Product Lifecycle Management(team), my work includes:
+\work{Viettel High Technology Industry Coperation}
+{May 2023--Now}
+{Software Development Engineer}
+{Working on 5G core project, MEC (Multi-access Edge Computing) team, my development work primarily focuses on the NEF (Network Exposure Function) network entity and its Northbound API services.
 
 \begin{itemize}
-    \item Taking the role of Security Master in my team, ensuring the delivered software meets the basic secure-coding standard.
-     The Standards(Rules) is based on the SEI CERT C++ book. 
-     Define a Way-of-Working for secure-coding review, which was omitted as the time I take over. 
-     Responsible for an official Secure-coding instructions and guideline for the CSCF project.
-    \item Mentoring for a newcomer in my team during his probation period.
+    \item Breakdown and analyze the technical requirements in accordance with the 3GPP Release 16 of 5G stand-alone system.
+    \\ Design and develop the following services:
+    \\ - Procedures for Monitoring (Event Exposure) service.
+    % \\ - Procedures for Monitoring (Event Exposure) service, which provides a mean to securely expose the information of the requested UE or group of UEs to the third-party Application Function.
+    \\ - Background Data Transfer (BDT) service.
+    % \\ - Background Data Transfer (BDT) service, this service enable the AF to negotiate with the system to perform  resource management of background data transfer to a set of UEs in a set of time window and usage threshold.
+    \item Handle the service onboarding procedures for third-party Application Function, include: service provisioning; configuring the Service Level Agreement (SLA); retrieving JWT access token for authentication, authorization through the OAuth2.0 framework.
+    \item Config and Maintain CICD pipeline for the NEF project. The pipeline includes SonarQube scan, unit testing, Kubernetes deployment and functional testing.
+    \item Using Helm chart and Ansible to deploy the 5G core Private as a software package.
+\end{itemize}}
+
+
+
+\work{DEK Technologies VietNam}
+{Nov 2021--May 2023}
+{Software Engineer}
+{Worked in CSCF project, a central component in IMS architecture.
+ My customer is Ericsson from Sweden, one of the world's leading companies in telecommunications.
+ \\ My responsibilities are in Product Lifecycle Management(team), my work included:
+
+\begin{itemize}
+    \item Took the role of Security Master in my team, ensured the delivered software meets the basic secure-coding standard.
+     The Standards(Rules) are based on the SEI CERT C++ book. 
+     Defined a Way-of-Working for secure-coding review, which was omitted as the time I took over. 
     \item Preparing content and perform early System Test for customer's Emergency Package.
-    \item Resolving the Trouble Reported by customer and deliver the fix to integration branch along with other feature teams.
+    \item Resolving the Trouble Reported from customer, the remediation then delivered into the integration branch along with other feature teams.
 \end{itemize}}
 
 
 \work{Intel Products Vietnam}
 {Aug 2020--Feb 2021}
 {Engineering Intern}
-{Worked in the Finish Inspection team, Assembly Engineer department. My work includes:
+{Worked in the Finish Inspection team, Assembly Engineer department. My work included:
 \begin{itemize}
     \item Inherited the hardwares and machines built from a prior intern and my mentor. 
     Tracked and and troubleshot those Automated Dimensional Visual Inspection(upto 30) machines.
     \item Used an in-build SQL tool to access and crawled data from VNAT factory. 
     With the provided data, I performed data pre-processing and built a data set for further machine learning activities. 
-    \item Trained and customized an Object Detection(Python, YOLOv3) model to detect faulty manufacturing, foreign materials and defects on unit product such as Intel Comet Lake, Whisky Lake. 
+    \item Trained and customized an Object Detection(Python, YOLOv3) model to detect faulty manufacturing, foreign materials and defects on unit product such as Intel Comet Lake, Intel Whisky Lake.
     The final demo model exceeded the target Accuracy(80\%) set by my mentor.
 \end{itemize}}
 
@@ -191,48 +207,32 @@
 \section*{Education}
 \education{Ho Chi Minh City University of Technology (HCMUT)}
 {Aug 2017--Nov 2021}
-{Bachelor of Engineering: Electronic and Telecommunication; GPA: 7.29/10}
+{Bachelor of Engineering: Electronic and Telecommunication; GPA: 7.29}
 {}
-
-\education{Ho Chi Minh City University of Science: Computer Center (HCMUS-CSC)}
-{Aug 2022--Feb 2023}
-{Python Developer Course (Awaiting for Course Certificate)}
-{}
-
-
-\section*{Personal and Academic Projects}
-\project{Sound-Plan an online Music hub}
-{Final project for Python Developer Course }
-{
-  \begin{itemize}
-    \item Using Django framework to develop a web-application(Sound-Plan). 
-     The app is enrich with features that enable user to stream music, buy event ticket and read latest music news.
-     The project was done personally and within a month.
-    \item Github: https://github.com/zzhappyzebrazz/Sound-Plan
-  \end{itemize}
-  }
-
-\project{Indoor Air Quality Monitoring system}
-{Thesis project}
+\project{}
+{Thesis project: Indoor Air Quality Monitoring system}
 {
   \begin{itemize}
     \item Fully designed and crafted IOT devices that embedded with ARM Cortex-M0 MCU. 
-     The device is solely for the attention of collecting PM2.5 fine dust and many Volatile Organic Compounds concentrations. 
-     The data is packed and sent to a web server (Raspberry pie) by MQTT protocol for visualization(achieved a grade of 89\%).
+     Those devices are solely for the attention of collecting PM2.5 fine dust and many other Volatile Organic Compounds(VOC) concentrations. 
+     The data is packed and sent to a web server (a Raspberry Pie) via MQTT protocol for analysis and visualization(achieved a grade of 89\%).
 
     \item Github: https://github.com/zzhappyzebrazz/IndoorAirQuality-system
   \end{itemize}
-  }
+}
+{}
 
 % technical skills
 \section*{Technical skills}
-
-\skill{Programming languages}{\textsc{C/C++}, \textsc{Python (Django-framework)}}
-\skill{Other}{\textit{Git, Linux, OOP, Troubleshooting.}}
+\skill{Programming languages}{\textsc{C/C++}, \textsc{Golang}.}
+\skill{Cloud Native}{\textsc{Kubernetes, Docker, Helm chart, CI/CD with Gitlab.}}
+\skill{Technical document}{\textsc{3GPP Technical Specification, RFC documents, Design and Guideline documentation.}}
+\skill{Other}{\textsc{Git, Linux, OOP, Troubleshooting.}}
 
 % languages
 \section*{Languages}
-\lan{VietNamese}{Native}
-\lan{English}{950/990 TOEIC Listening and Reading (Test date: 2020/12/06)}
+\lan{VietNamese}{Native speaker}
+\lan{English}{IELTS Academic module overall band score: 7.5 (Test date: 22/6/2024)
 
+\hspace{4.2cm} TOEIC Listening and Reading 950/990 (Test date: 06/12/2020)}
 \end{document}
