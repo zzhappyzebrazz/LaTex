@@ -1,238 +1,53 @@
-\documentclass[10pt]{article}
+\documentclass[a4paper,14pt]{letter}
 
-%% PACKAGES %%
+% Useful packages
+\usepackage[utf8]{inputenc} % For special characters
+\usepackage[T1]{fontenc}    % Font encoding
+\usepackage{geometry}       % To set the margins
+\geometry{top=0.1cm, bottom=0.5cm, left=2cm, right=2cm}
 
-\usepackage[english]{babel} % multilingual support
-\usepackage[utf8x]{inputenc} % encoding
-\usepackage{blindtext} % to insert blind text
-\usepackage{hyperref}
-\usepackage[compact]{titlesec}         % you need this package
-
-% Set the default font
-\usepackage{tgpagella}
-
-% set the page layout
-\usepackage{geometry}
-\geometry{
-  a4paper,
-  left=5mm,
-  right=5mm,
-  bottom=3mm,
-  top=4mm}
-
-% empty the headers, footers, page numbers…
-\pagestyle{empty}
-
-% Custom sectioning with secsty
-\usepackage{sectsty}
-
-\sectionfont{%                        
-    \large % make sections smaller
-    \fontfamily{qag}\selectfont % change font family
-    \sectionrule{0pt}{0pt}{-5pt}{1pt} % insert a thin rule
-}
-
-\titlespacing{\section}{0pt}{0pt}{0pt}
-
-%% MACROS %%
-
-% size of the boxes used to align text
-\newlength{\spacebox}
-\settowidth{\spacebox}{123456789}
-
-% vertical space separator between entries
-\newcommand{\sepspace}{\vspace*{0.1em}}
-
-% name
-\newcommand{\name}[1]{
-\Huge % font size
-\fontfamily{phv}\selectfont % font family
-% print name centered and bold
-\begin{center} \textbf{#1} \end{center}\par
-% back to normal size and font
-\normalsize\normalfont}
-
-% motto
-\newcommand{\motto}[1]{
-  \large % font size
-  \fontfamily{phv}\selectfont % font family
-% print motto centered and slanted
-  \begin{center} \textsl{#1}\end{center}\par
-% back to normal size and font
-  \normalsize \normalfont}
-
-
-% personal information
-\newcommand{\info}[2]{
-% set specific indentation for personal information
-  \noindent\hangindent=0em\hangafter=0
-% create a box to align two pieces of text
-  \parbox{\spacebox}{%
-  \textit{#1}} % slanted entry name
-  #2 \par} % entry value
-
-
-% skill
-\newcommand{\skill}[2]{
-% set specific indentation for personal information
-\noindent\hangindent=0em\hangafter=0
-% create a box to align two pieces of text
-\parbox{3\spacebox}{% three times larger box
-\textsc{#1}} % small caps entry name
-#2 \par} % entry value
-
-% language level
-\newcommand{\lan}[2]{
-    % set specific indentation for personal information
-    \noindent\hangindent=0em\hangafter=0
-    % create a box to align two pieces of text
-    \parbox{3\spacebox}{%
-        \textbf{#1}} % bold font entry name
-     #2 \par}    % entry value
-
-% education entry
-\newcommand{\education}[4]{
-
-% name of the studies
-  \noindent  \textbf{#1}
-  % at the right the duration
-    \hfill 
-    \framebox{% duration inside a frame box
-    \parbox{9em}{%
-    \centering\textbf{#2}}} \par
- % new paragraph with the school in italics
-     \noindent \textit{#3} \par
-     % description with no hanging and in smaller text
-     \vspace*{0.5em}
-     \noindent\hangindent=2em\hangafter=0 \small #4 
-%back to normal size
-\normalsize \par}
-
-
-% work experience
-
-\newcommand{\work}[4]{
-% name of the work
-  \noindent  \textbf{#1}
-% at the right the duration
-  \hfill 
-\framebox{% duration inside a frame box
-  \parbox{9em}{%
-  \centering\textbf{#2}}} \par
-% new paragraph with the school in italics
-  \noindent \textit{#3} \par
-% description with no hanging and in smaller text
-  \vspace*{0.5em}
-  \noindent\hangindent=2em\hangafter=0 \small #4 
-%back to normal size
-\normalsize \par}
-
-\newcommand{\project}[3]{
-  \noindent \textbf{#1} \par
-  \noindent \textit{#2} \par
-  \vspace*{0.5em}
-  \noindent\hangindent=2em\hangafter=0 \small #3
-  \normalsize \par
-}
-
-\titlespacing*{\section}
-{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
-\titlespacing*{\subsection}
-{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
-
+% Sender Information
+\signature{Your Name}
+\address{Ho Chi Minh city, Viet Nam}
+\vspace{0.2cm}
+% Document begins
 \begin{document}
-% name and motto
-\name{Lai Minh Ha}
-\vspace*{-13pt}
-\motto{}
+\date{October 6, 2024}
+% Recipient Information
+\begin{letter}{Recipient Name \\ Company Name \\ Company Address \\ City \\ Country}
 
-% personal information
-\info{Email:}{laiminhha060@gmail.com}
-\info{Phone:}{0963749285}
-\info{Address:}{686/78/8 Cach Mang Thang 8, Tan Binh, Ho Chi Minh city}
-\info{Github:}{https://github.com/zzhappyzebrazz}
-\info{Linkedin:}{https://www.linkedin.com/in/minh-h\%C3\%A0-66b097177/}
+% Add a centered headline within the letter environment
+\vspace*{-6cm}
+\begin{center}
+    \LARGE \textbf{Motivation Letter}
+\end{center}
 
-% work experience
-\section*{Work Experience}
-\work{Viettel High Technology Industry Coperation}
-{May 2023--Now}
-{Software Development Engineer}
-{Working on 5G core project, MEC (Multi-access Edge Computing) team, my development work primarily focuses on the NEF (Network Exposure Function) network entity and its Northbound API services.
+\vspace{0.2cm} % Adds some space between the headline and the rest of the letter
 
-\begin{itemize}
-    \item Breakdown and analyze the technical requirements in accordance with the 3GPP Release 16 of 5G stand-alone system.
-    \\ Design and develop the following services:
-    \\ - Procedures for Monitoring (Event Exposure) service.
-    % \\ - Procedures for Monitoring (Event Exposure) service, which provides a mean to securely expose the information of the requested UE or group of UEs to the third-party Application Function.
-    \\ - Background Data Transfer (BDT) service.
-    % \\ - Background Data Transfer (BDT) service, this service enable the AF to negotiate with the system to perform  resource management of background data transfer to a set of UEs in a set of time window and usage threshold.
-    \item Handle the service onboarding procedures for third-party Application Function, include: service provisioning; configuring the Service Level Agreement (SLA); retrieving JWT access token for authentication, authorization through the OAuth2.0 framework.
-    \item Config and Maintain CICD pipeline for the NEF project. The pipeline includes SonarQube scan, unit testing, Kubernetes deployment and functional testing.
-    \item Using Helm chart and Ansible to deploy the 5G core Private as a software package.
-\end{itemize}}
+% Opening salutation
+\opening{Dear Sir/Madam,}
 
+% Body of the letter
+I am writing to express my interest in the [position/program]. My background in [your field of study or experience] and my passion for [subject or industry] align closely with the requirements of the [position/program], making me a strong candidate for consideration.
 
+I have completed [specific degree/experience] and have gained practical experience in [relevant work/internship]. Throughout my career, I have demonstrated a commitment to [mention any specific skills or accomplishments], and I am excited about the opportunity to bring my expertise to [company/program name].
 
-\work{DEK Technologies VietNam}
-{Nov 2021--May 2023}
-{Software Engineer}
-{Worked on the CSCF project, a central component in IMS architecture.
- My customer is Ericsson from Sweden, one of the world's leading companies in telecommunications.
- \\ My responsibilities are in Product Lifecycle Management(team), my work included:
+I am confident that my skills, enthusiasm, and dedication will be an asset to your team, and I would welcome the opportunity to discuss how my background aligns with your needs.
 
-\begin{itemize}
-    \item Took the role of Security Master in my team, ensured the delivered software meets the basic secure-coding standard.
-     The Standards(Rules) are based on the SEI CERT C++ book. 
-     Defined a Way-of-Working for secure-coding review, which was omitted at the time I took over. 
-    \item Prepared content and perform early System Test for customer's Emergency Package.
-    \item Resolved the Trouble Reports from customer, the remediation then delivered into the integration branch along with other feature teams.
-\end{itemize}}
+% Closing statement
+Thank you for considering my application. I look forward to the possibility of contributing to your organization.
 
+% Closing salutation
+\closing{Sincerely,}
 
-\work{Intel Products Vietnam}
-{Aug 2020--Feb 2021}
-{Engineering Intern}
-{Worked in the Finish Inspection team, Assembly Engineer department. My work included:
-\begin{itemize}
-    \item Inherited the hardwares and machines built from a prior intern and my mentor. 
-    Tracked and and troubleshot those Automated Dimensional Visual Inspection(upto 30) machines.
-    \item Used an in-build SQL tool to access and crawled data from VNAT factory. 
-    With the provided data, I performed data pre-processing and built a data set for further machine learning activities. 
-    \item Trained and customized an Object Detection(Python, YOLOv3) model to detect faulty manufacturing, foreign materials and defects on unit product such as Intel Comet Lake, Intel Whisky Lake, ect...
-    The final demo model exceeded the target Accuracy(80\%) set by my mentor.
-\end{itemize}}
+% Right-aligning final information about yourself
+\begin{flushright}
+Your Name \\
+Your Address \\
+Your Email \\
+Your Phone Number
+\end{flushright}
 
-% education
-\section*{Education}
-\education{Ho Chi Minh City University of Technology (HCMUT)}
-{Aug 2017--Nov 2021}
-{Bachelor of Engineering: Electronic and Telecommunication; GPA: 7.29}
-{}
-\project{}
-{Thesis project: Indoor Air Quality Monitoring system}
-{
-  \begin{itemize}
-    \item Fully designed and crafted IOT devices that embedded with ARM Cortex-M0 MCU. 
-     Those devices are solely for the attention of collecting PM2.5 fine dust and many other Volatile Organic Compounds(VOC) concentrations. 
-     The data is packed and sent to a web server (a Raspberry Pie) via MQTT protocol for analysis and visualization(achieved a grade of 89\%).
+\end{letter}
 
-    \item Github: https://github.com/zzhappyzebrazz/IndoorAirQuality-system
-  \end{itemize}
-}
-{}
-
-% technical skills
-\section*{Technical skills}
-\skill{Programming languages}{\textsc{C/C++}, \textsc{Golang}.}
-\skill{Cloud Native}{\textsc{Kubernetes, Docker, Helm chart, CI/CD with Gitlab.}}
-\skill{Technical document}{\textsc{3GPP Technical Specification, RFC documents, Design and Guideline documentation.}}
-\skill{Other}{\textsc{Git, Linux, OOP, Troubleshooting.}}
-
-% languages
-\section*{Languages}
-\lan{VietNamese}{Native}
-\lan{English}{IELTS Academic module overall band score: 7.5 (Test date: 22/6/2024)
-
-\hspace{4.2cm} TOEIC Listening and Reading 950/990 (Test date: 06/12/2020)}
 \end{document}
