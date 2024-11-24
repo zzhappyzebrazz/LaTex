@@ -13,12 +13,12 @@
 
 % set the page layout
 \usepackage{geometry}
-\geometry{
+\geometry {
   a4paper,
   left=5mm,
   right=5mm,
   bottom=3mm,
-  top=4mm}
+  top=4mm }
 
 % empty the headers, footers, page numbers…
 \pagestyle{empty}
@@ -161,15 +161,13 @@
 {Working on 5G core project, MEC (Multi-access Edge Computing) team, my development work primarily focuses on the NEF (Network Exposure Function) network entity and its Northbound API services.
 
 \begin{itemize}
-    \item Breakdown and analyze the technical requirements in accordance with the 3GPP Release 16 of 5G stand-alone system.
-    \\ Design and develop the following services:
-    \\ - Procedures for Monitoring (Event Exposure) service.
-    % \\ - Procedures for Monitoring (Event Exposure) service, which provides a mean to securely expose the information of the requested UE or group of UEs to the third-party Application Function.
-    \\ - Background Data Transfer (BDT) service.
+    \item Analyze and breakdown the technical requirements in accordance with the 3GPP Release 16 of 5G stand-alone system.
+     Design and develop the following services: Procedures for Monitoring (Event Exposure) service; % \\ - Procedures for Monitoring (Event Exposure) service, which provides a mean to securely expose the information of the requested UE or group of UEs to the third-party Application Function.
+     Background Data Transfer (BDT) service.
     % \\ - Background Data Transfer (BDT) service, this service enable the AF to negotiate with the system to perform  resource management of background data transfer to a set of UEs in a set of time window and usage threshold.
-    \item Handle the service onboarding procedures for third-party Application Function, include: service provisioning; configuring the Service Level Agreement (SLA); retrieving JWT access token for authentication, authorization through the OAuth2.0 framework.
-    \item Config and Maintain CICD pipeline for the NEF project. The pipeline includes SonarQube scan, unit testing, Kubernetes deployment and functional testing.
-    \item Using Helm chart and Ansible to deploy the 5G core Private as a software package.
+    \item Manage service onboarding procedures for third-party Application Function, including: service provisioning; configuring the Service Level Agreement (SLA); retrieving JWT access tokens for authentication and authorization via the OAuth2.0 framework.
+    \item Configure and maintain CI/CD pipeline for the NEF project. The pipeline includes SonarQube scans, Unit-testing, Kubernetes deployment using Helm charts, and functional testing.
+    % \item Using Helm chart and Ansible to deploy the 5G core Private as a software package.
 \end{itemize}}
 
 
@@ -178,28 +176,26 @@
 {Nov 2021--May 2023}
 {Software Engineer}
 {Worked on the CSCF project, a central component in IMS architecture.
- My customer is Ericsson from Sweden, one of the world's leading companies in telecommunications.
- \\ My responsibilities are in Product Lifecycle Management(team), my work included:
+ The customer was Ericsson (Sweden), a global leader in Telecommunications.
+%  \\ My responsibilities were in Product Lifecycle Management(team), my work included:
 
 \begin{itemize}
-    \item Took the role of Security Master in my team, ensured the delivered software meets the basic secure-coding standard.
-     The Standards(Rules) are based on the SEI CERT C++ book. 
-     Defined a Way-of-Working for secure-coding review, which was omitted at the time I took over. 
-    \item Prepared content and perform early System Test for customer's Emergency Package.
-    \item Resolved the Trouble Reports from customer, the remediation then delivered into the integration branch along with other feature teams.
+    \item Took the role of \textbf{Security Master} in the team, ensuring that delivered software adhered to basic secure-coding standard based ont the \textit{SEI CERT C++} guideline.
+     Defined a Way-of-Working for the secure-coding reviews, addressing a gap in processes when I assumed the role. 
+    \item Prepared content and performed Early System Test for customer's Emergency Package.
+    \item Investigated and resolved the trouble reports (TRs) from the customer, ensuring fixes were integrated into the integration branch alongside contributions from other feature teams.
 \end{itemize}}
 
 
 \work{Intel Products Vietnam}
 {Aug 2020--Feb 2021}
 {Engineering Intern}
-{Worked in the Finish Inspection team, Assembly Engineer department. My work included:
+{Worked in the Finish Inspection team within the Assembly Engineer department.
 \begin{itemize}
-    \item Inherited the hardwares and machines built from a prior intern and my mentor. 
-    Tracked and and troubleshot those Automated Dimensional Visual Inspection(upto 30) machines.
-    \item Used an in-build SQL tool to access and crawled data from VNAT factory. 
-    With the provided data, I performed data pre-processing and built a data set for further machine learning activities. 
-    \item Trained and customized an Object Detection(Python, YOLOv3) model to detect faulty manufacturing, foreign materials and defects on unit product such as Intel Comet Lake, Intel Whisky Lake, ect...
+    \item Took hardware and machines built by a previous intern and my mentor. 
+    Monitored and troubleshot upto 30 Automated Dimensional Visual Inspection machines.
+    \item Used an in-build SQL tool to access and crawl visual data from VNAT factory database. Preprocessed the data to build a dataset for subsequent machine learning activities.
+    \item Trained and customized an Object Detection using Python and YOLOv3 model to identify manufacturing defects, foreign materials, and product defects on units such as Intel Comet Lake, Intel Whisky Lake, ect...
     The final demo model exceeded the target Accuracy(80\%) set by my mentor.
 \end{itemize}}
 
@@ -210,14 +206,13 @@
 {Bachelor of Engineering: Electronic and Telecommunication; GPA: 7.29}
 {}
 \project{}
-{Thesis project: Indoor Air Quality Monitoring system}
+{Thesis project: Indoor Air Quality Monitoring system \\(Github: https://github.com/zzhappyzebrazz/IndoorAirQuality-system)}
 {
   \begin{itemize}
-    \item Fully designed and crafted IOT devices that embedded with ARM Cortex-M0 MCU. 
-     Those devices are solely for the attention of collecting PM2.5 fine dust and many other Volatile Organic Compounds(VOC) concentrations. 
-     The data is packed and sent to a web server (a Raspberry Pie) via MQTT protocol for analysis and visualization(achieved a grade of 89\%).
-
-    \item Github: https://github.com/zzhappyzebrazz/IndoorAirQuality-system
+    \item Fully designed and developed IoT devices embedded with ARM Cortex-M0 MCU. 
+     These devices were specifically designed to collect PM2.5 fine dust and various Volatile Organic Compound (VOC) concentrations.
+     \item Packaged and transmitted the collected data to a web server (Raspberry Pi) via the MQTT protocol for analysis and visualization.
+     \item Independently completed the thesis project, achieving a final grade of 89\%.
   \end{itemize}
 }
 {}
